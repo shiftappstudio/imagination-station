@@ -2,7 +2,13 @@ import express, { Request, Response } from "express";
 import bodyParser from "body-parser";
 import { RunpodRoutes } from "./routes/request.routes";
 import { FileRoutes } from "./routes/file.routes";
+import cors from "cors";
+
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
+
 app.use((_req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
