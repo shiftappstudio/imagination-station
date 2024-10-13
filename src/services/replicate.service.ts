@@ -7,16 +7,13 @@ export const sdxl = async (prompt: string) => {
       {
         input: {
           prompt: prompt,
-          negative_prompt: "extra fingers , crossed fingers , bad hand",
-          width: 1024,
-          height: 1024,
-          scheduler: "DDIM",
-          num_inference_steps: 30,
-          guidance_scale: 7.5,
-          prompt_strength: 0.8,
-          refine: "expert_ensemble_refiner",
-          high_noise_frac: 0.8,
-          lora_scale: 0.6,
+          go_fast: true,
+          megapixels: "1",
+          num_outputs: 1,
+          aspect_ratio: "1:1",
+          output_format: "webp",
+          output_quality: 80,
+          num_inference_steps: 4
         },
       }
     );
